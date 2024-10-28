@@ -1,11 +1,18 @@
 <?php
-require_once '../partials/auth.php';
+session_start();
+require_once '../config/database.php';
+require_once '../controllers/UserController.php';
+
+use App\Controllers\UserController;
+
+$error = '';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $email = $_POST['email'];
     $password = $_POST['mot_de_passe'];
 
-    if (loginUser($email, $password)) {
+    $userController = new UserController($pdo);
+    if ($userController->login($email, $password)) {
         header("Location: /public/index.php");
         exit();
     } else {
@@ -22,9 +29,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <title>Connexion</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/../public/assets/css/style.css"> <!-- Assurez-vous que le chemin est correct -->
-<?php require_once '../partials/header.php'; ?>
 </head>
 <body>
+    <?php require_once '../partials/header.php'; ?>
     <div class="container mt-5">
         <?php if (!empty($error)): ?>
             <p class="text-danger"><?php echo $error; ?></p>
@@ -42,5 +49,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         </form>
     </div>
     <?php require_once '../partials/footer.php'; ?>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

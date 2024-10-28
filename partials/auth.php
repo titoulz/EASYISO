@@ -3,7 +3,7 @@ if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
 
-require_once '../config/database.php'; // Inclure la configuration de la base de données
+require_once '../config/database.php';
 
 function loginUser($email, $password) {
     global $pdo; // Utiliser la connexion PDO existante

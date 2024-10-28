@@ -22,24 +22,21 @@ class User {
             return false; // L'email existe déjà
         }
 
-        // Insérer le nouvel utilisateur
-        $stmt = $this->pdo->prepare("INSERT INTO Utilisateur (nom, email, mot_de_passe) VALUES (:nom, :email, :mot_de_passe)");
-        $stmt->execute([
+        // Créer un nouvel utilisateur
+        $hashedPassword = password_hash($mot_de_passe, PASSWORD_DEFAULT);
+        $stmt = $this->pdo->prepare("INSERT INTO Utilisateur (nom, prenom, email, mot_de_passe) VALUES (:nom, :prenom, :email, :mot_de_passe)");
+        return $stmt->execute([
             'nom' => $nom,
+            'prenom' => $prenom,
             'email' => $email,
-            'mot_de_passe' => $mot_de_passe
+            'mot_de_passe' => $hashedPassword
         ]);
-        return true;
     }
 
-    public function verifyUser($email, $mot_de_passe) {
+    public function getUserByEmail($email) {
         $stmt = $this->pdo->prepare("SELECT * FROM Utilisateur WHERE email = :email");
         $stmt->execute(['email' => $email]);
-        $user = $stmt->fetch();
-
-        if ($user && password_verify($mot_de_passe, $user['mot_de_passe'])) {
-            return $user;
-        }
-        return false;
+        return $stmt->fetch();
     }
 }
+?>

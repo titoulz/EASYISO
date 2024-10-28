@@ -17,10 +17,10 @@ try {
         die("Chapitre non trouvé.");
     }
 
-    // Récupérer le contenu du chapitre
-    $stmt = $pdo->prepare("SELECT type_contenu, contenu FROM ContenuChapitre WHERE id_chapitre = ?");
+    // Récupérer les sous-chapitres associés
+    $stmt = $pdo->prepare("SELECT id_souschapitre, nom_souschapitre FROM SousChapitre WHERE id_chapitre = ? ORDER BY ordre");
     $stmt->execute([$id_chapitre]);
-    $contenus = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    $sousChapitres = $stmt->fetchAll(PDO::FETCH_ASSOC);
 } catch (PDOException $e) {
     die("Erreur de connexion à la base de données : " . $e->getMessage());
 }
@@ -33,6 +33,7 @@ try {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo htmlspecialchars($chapitre['nom_chapitre']); ?></title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/public/assets/css/navbar.css"> <!-- Inclure le fichier CSS personnalisé -->
 </head>
 <body>
     <?php require_once '../partials/header.php'; ?>
@@ -40,12 +41,21 @@ try {
         <h1><?php echo htmlspecialchars($chapitre['nom_chapitre']); ?></h1>
         <p><?php echo htmlspecialchars($chapitre['description']); ?></p>
         <div>
-            <?php foreach ($contenus as $contenu): ?>
-                <h3><?php echo htmlspecialchars($contenu['type_contenu']); ?></h3>
-                <p><?php echo nl2br(htmlspecialchars($contenu['contenu'])); ?></p>
-            <?php endforeach; ?>
+            <h2>Sous-Chapitres</h2>
+            <ul class="list-group">
+                <?php foreach ($sousChapitres as $sousChapitre): ?>
+                    <li class="list-group-item">
+                        <a href="souschapitres.php?id_souschapitre=<?php echo $sousChapitre['id_souschapitre']; ?>">
+                            <?php echo htmlspecialchars($sousChapitre['nom_souschapitre']); ?>
+                        </a>
+                    </li>
+                <?php endforeach; ?>
+            </ul>
         </div>
     </div>
     <?php require_once '../partials/footer.php'; ?>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

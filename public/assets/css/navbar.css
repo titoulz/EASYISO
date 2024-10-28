@@ -1,0 +1,29 @@
+/* Styles pour la navbar */
+.navbar {
+    background-color: #f8f9fa; /* Couleur de fond */
+}
+
+.navbar .navbar-brand {
+    font-weight: bold;
+}
+
+.navbar .nav-link {
+    color: #000; /* Couleur des liens */
+}
+
+.navbar .nav-link:hover {
+    color: #007bff; /* Couleur des liens au survol */
+}
+
+.navbar .dropdown-menu {
+    background-color: #f8f9fa; /* Couleur de fond du menu déroulant */
+}
+
+.navbar .dropdown-item {
+    color: #000; /* Couleur des éléments du menu déroulant */
+}
+
+.navbar .dropdown-item:hover {
+    background-color: #007bff; /* Couleur de fond des éléments du menu déroulant au survol */
+    color: #fff; /* Couleur des éléments du menu déroulant au survol */
+}

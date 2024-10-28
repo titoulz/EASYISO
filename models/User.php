@@ -23,10 +23,9 @@ class User {
         }
 
         // Insérer le nouvel utilisateur
-        $stmt = $this->pdo->prepare("INSERT INTO Utilisateur (nom, prenom, email, mot_de_passe) VALUES (:nom, :prenom, :email, :mot_de_passe)");
+        $stmt = $this->pdo->prepare("INSERT INTO Utilisateur (nom, email, mot_de_passe) VALUES (:nom, :email, :mot_de_passe)");
         $stmt->execute([
             'nom' => $nom,
-            'prenom' => $prenom,
             'email' => $email,
             'mot_de_passe' => $mot_de_passe
         ]);

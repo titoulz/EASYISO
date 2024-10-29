@@ -3,7 +3,7 @@
         'name' => 'your-vendor/ia-learning',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => 'afb3c683ce4722c9e6942dc797e3ac9854368df1',
+        'reference' => 'b227fa66a5034da49ffb26dcb24424c1ac7a70f3',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -67,7 +67,7 @@
         'your-vendor/ia-learning' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => 'afb3c683ce4722c9e6942dc797e3ac9854368df1',
+            'reference' => 'b227fa66a5034da49ffb26dcb24424c1ac7a70f3',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

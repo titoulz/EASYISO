@@ -8,7 +8,7 @@ require_once '../config/database.php';
 $matieres = [];
 if (isset($_SESSION['user_id'])) {
     try {
-        $stmt = $pdo->query("SELECT id_matiere, nom_matiere FROM Matiere");
+        $stmt = $pdo->query("SELECT id_matiere, nom_matiere FROM matiere");
         $matieres = $stmt->fetchAll(PDO::FETCH_ASSOC);
     } catch (PDOException $e) {
         die("Erreur de connexion à la base de données : " . $e->getMessage());
@@ -23,6 +23,7 @@ if (isset($_SESSION['user_id'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IALEARNING</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="/public/assets/css/navbar.css"> <!-- Inclure le fichier CSS personnalisé -->
 </head>
 <body>
@@ -37,7 +38,7 @@ if (isset($_SESSION['user_id'])) {
                 <?php if (isset($_SESSION['user_id'])): ?>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="matiereDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Matières
+                        <i class="fas fa-book-open"></i>   Matières
                         </a>
                         <div class="dropdown-menu" aria-labelledby="matiereDropdown">
                             <?php foreach ($matieres as $matiere): ?>
@@ -47,8 +48,9 @@ if (isset($_SESSION['user_id'])) {
                             <?php endforeach; ?>
                         </div>
                     </li>
-                    <li class="nav-item"><a href="/public/index.php?action=dashboard" class="nav-link">Tableau de bord</a></li>
-                    <li class="nav-item"><a href="/partials/logout.php" class="nav-link">Déconnexion</a></li>
+                    <li class="nav-item"><a href="/partials/chat.php" class="nav-link"><i class="fas fa-comments"></i> Chat</a></li>
+                    <li class="nav-item"><a href="/public/index.php?action=dashboard" class="nav-link"><i class="fas fa-tachometer-alt"></i> Tableau de bord</a></li>
+                    <li class="nav-item"><a href="/partials/logout.php" class="nav-link"><i class="fas fa-sign-out-alt"></i> Déconnexion</a></li>
                 <?php else: ?>
                     <li class="nav-item"><a href="/views/register.php" class="nav-link">Inscription</a></li>
                     <li class="nav-item"><a href="/views/login.php" class="nav-link">Connexion</a></li>

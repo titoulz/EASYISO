@@ -9,7 +9,7 @@ if (!$id_matiere) {
 
 try {
     // Récupérer les informations de la matière
-    $stmt = $pdo->prepare("SELECT nom_matiere FROM Matiere WHERE id_matiere = ?");
+    $stmt = $pdo->prepare("SELECT nom_matiere FROM matiere WHERE id_matiere = ?");
     $stmt->execute([$id_matiere]);
     $matiere = $stmt->fetch(PDO::FETCH_ASSOC);
 

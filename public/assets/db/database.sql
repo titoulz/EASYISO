@@ -93,3 +93,13 @@ CREATE TABLE IF NOT EXISTS Reponse (
     correcte BOOLEAN DEFAULT FALSE,
     FOREIGN KEY (id_question) REFERENCES QuestionQuiz(id_question) ON DELETE CASCADE
 );
+
+--Table Chat
+CREATE TABLE Chat ( 
+    id_chat INT AUTO_INCREMENT PRIMARY KEY,
+     id_utilisateur INT NOT NULL,
+      message TEXT NOT NULL,
+       role ENUM('user',
+        'assistant') NOT NULL,
+         date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+          FOREIGN KEY (id_utilisateur) REFERENCES Utilisateur(id_utilisateur) ON DELETE CASCADE );

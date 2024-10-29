@@ -51,3 +51,24 @@ function loginUser($email, $password) {
         return false;
     }
 }
+
+function updatePassword($userId, $currentPassword, $newPassword) {
+    global $pdo;
+
+    // Récupérez l'utilisateur par ID
+    $stmt = $pdo->prepare("SELECT mot_de_passe FROM Utilisateur WHERE id_utilisateur = ?");
+    $stmt->execute([$userId]);
+    $user = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    // Vérifiez l'ancien mot de passe
+    if ($user && password_verify($currentPassword, $user['mot_de_passe'])) {
+        // Hachez le nouveau mot de passe
+        $hashedPassword = password_hash($newPassword, PASSWORD_DEFAULT);
+
+        // Mettez à jour le mot de passe
+        $stmt = $pdo->prepare("UPDATE Utilisateur SET mot_de_passe = ? WHERE id_utilisateur = ?");
+        return $stmt->execute([$hashedPassword, $userId]);
+    } else {
+        return false;
+    }
+}

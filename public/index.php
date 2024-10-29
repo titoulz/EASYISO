@@ -80,9 +80,6 @@ if ($action == 'logout') {
     <div class="container mt-5">
         <h1>Accueil</h1>
         <p>Bienvenue sur IALEARNING, la plateforme d'apprentissage de l'intelligence artificielle.</p>
-        <a href="/views/register.php" class="btn btn-primary">Inscription</a>
-        <a href="/views/login.php" class="btn btn-secondary">Connexion</a>
-    </div>
     <?php require_once '../partials/footer.php'; ?>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>

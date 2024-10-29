@@ -37,16 +37,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <p class="text-danger"><?php echo $error; ?></p>
         <?php endif; ?>
         <form action="/public/index.php?action=login" method="post">
-            <div class="form-group">
-                <label for="email">Email :</label>
-                <input type="email" id="email" name="email" class="form-control" required>
-            </div>
-            <div class="form-group">
-                <label for="mot_de_passe">Mot de passe :</label>
-                <input type="password" id="mot_de_passe" name="mot_de_passe" class="form-control" required>
-            </div>
-            <button type="submit" class="btn btn-primary">Connexion</button>
-        </form>
+        <label for="email">Email :</label>
+        <input type="email" id="email" name="email" required><br>
+        <label for="mot_de_passe">Mot de passe :</label>
+        <input type="password" id="mot_de_passe" name="mot_de_passe" required><br>
+        <button type="submit">Se connecter</button>
+    </form>
     </div>
     <?php require_once '../partials/footer.php'; ?>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

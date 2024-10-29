@@ -5,8 +5,34 @@ if (session_status() == PHP_SESSION_NONE) {
 
 require_once '../config/database.php';
 
+function registerUser($email, $password, $name) {
+    global $pdo;
+
+    // Vérifiez si l'email existe déjà
+    $stmt = $pdo->prepare("SELECT id_utilisateur FROM Utilisateur WHERE email = ?");
+    $stmt->execute([$email]);
+    if ($stmt->fetch()) {
+        return false; // L'email existe déjà
+    }
+
+    // Hachez le mot de passe
+    $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+
+    // Insérez le nouvel utilisateur
+    try {
+        $stmt = $pdo->prepare("INSERT INTO Utilisateur (email, mot_de_passe, nom) VALUES (?, ?, ?)");
+        $result = $stmt->execute([$email, $hashedPassword, $name]);
+        if (!$result) {
+            throw new Exception("Erreur lors de l'insertion de l'utilisateur.");
+        }
+        return $result;
+    } catch (Exception $e) {
+        error_log($e->getMessage());
+        return false;
+    }
+}
 function loginUser($email, $password) {
-    global $pdo; // Utiliser la connexion PDO existante
+    global $pdo;
 
     // Préparez et exécutez la requête
     $stmt = $pdo->prepare("SELECT id_utilisateur, nom, mot_de_passe FROM Utilisateur WHERE email = ?");
@@ -15,6 +41,9 @@ function loginUser($email, $password) {
 
     // Vérifiez le mot de passe
     if ($user && password_verify($password, $user['mot_de_passe'])) {
+        // Régénérez l'ID de session pour éviter les attaques de fixation de session
+        session_regenerate_id(true);
+
         $_SESSION['user_id'] = $user['id_utilisateur'];
         $_SESSION['nom'] = $user['nom'];
         return true;
@@ -22,20 +51,3 @@ function loginUser($email, $password) {
         return false;
     }
 }
-
-function isLoggedIn() {
-    return isset($_SESSION['user_id']);
-}
-
-function logoutUser() {
-    session_unset();
-    session_destroy();
-}
-
-function requireLogin() {
-    if (!isLoggedIn()) {
-        header("Location: /public/index.php?action=login&error=Vous devez être connecté pour accéder à cette page.");
-        exit();
-    }
-}
-?>

@@ -1,5 +1,6 @@
 <?php
 session_start();
+require_once '../config/database.php'; // Assurez-vous que ce fichier définit $pdo
 require_once '../controllers/UserController.php';
 
 use App\Controllers\UserController;

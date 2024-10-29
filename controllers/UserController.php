@@ -1,7 +1,8 @@
 <?php
 namespace App\Controllers;
 
-use App\Models\User;
+use App\Models\User; // Assurez-vous que cette ligne est correcte
+require_once '../models/User.php'; // Incluez le fichier User.php
 
 class UserController {
     private $userModel;
@@ -26,4 +27,3 @@ class UserController {
         session_destroy();
     }
 }
-?>

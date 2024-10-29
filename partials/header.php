@@ -3,7 +3,7 @@ if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
 
-require_once '../config/database.php';
+require_once __DIR__.'/../config/database.php';
 
 $matieres = [];
 if (isset($_SESSION['user_id'])) {
@@ -27,7 +27,7 @@ if (isset($_SESSION['user_id'])) {
     <link rel="stylesheet" href="/public/assets/css/navbar.css"> <!-- Inclure le fichier CSS personnalisé -->
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
     <div class="container">
         <a href="/public/index.php" class="navbar-brand">IALEARNING</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -48,7 +48,7 @@ if (isset($_SESSION['user_id'])) {
                             <?php endforeach; ?>
                         </div>
                     </li>
-                    <li class="nav-item"><a href="/partials/chat.php" class="nav-link"><i class="fas fa-comments"></i> Chat</a></li>
+                    <li class="nav-item"><a href="/partials/api/chat.php" class="nav-link"><i class="fas fa-comments"></i> Chat</a></li>
                     <li class="nav-item"><a href="/public/index.php?action=dashboard" class="nav-link"><i class="fas fa-tachometer-alt"></i> Tableau de bord</a></li>
                     <li class="nav-item"><a href="/partials/logout.php" class="nav-link"><i class="fas fa-sign-out-alt"></i> Déconnexion</a></li>
                 <?php else: ?>

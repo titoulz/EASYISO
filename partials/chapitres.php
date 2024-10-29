@@ -24,6 +24,7 @@ try {
 } catch (PDOException $e) {
     die("Erreur de connexion à la base de données : " . $e->getMessage());
 }
+$xyz=$matiere['nom_matiere'];
 ?>
 
 <!DOCTYPE html>
@@ -38,7 +39,7 @@ try {
 <body>
     <?php require_once '../partials/header.php'; ?>
     <div class="container mt-5">
-        <h1><?php echo htmlspecialchars($matiere['nom_matiere']); ?></h1>
+        <h1><?php echo htmlspecialchars($xyz); ?></h1>
         <ul class="list-group">
             <?php foreach ($chapitres as $chapitre): ?>
                 <li class="list-group-item">

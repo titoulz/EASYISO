@@ -1,30 +1,21 @@
 <?php
 require_once '../config/database.php';
 
-$id_matiere = $_GET['id_matiere'] ?? null;
+if (isset($_GET['id_theme'])) {
+    $id_theme = intval($_GET['id_theme']);
 
-if (!$id_matiere) {
-    die("ID de la matière manquant.");
-}
-
-try {
-    // Récupérer les informations de la matière
-    $stmt = $pdo->prepare("SELECT nom_matiere FROM matiere WHERE id_matiere = ?");
-    $stmt->execute([$id_matiere]);
-    $matiere = $stmt->fetch(PDO::FETCH_ASSOC);
-
-    if (!$matiere) {
-        die("Matière non trouvée.");
+    try {
+        // Récupérer les chapitres pour le thème sélectionné
+        $stmt = $pdo->prepare("SELECT id_chapitre, nom_chapitre, description FROM chapitre WHERE id_theme = :id_theme");
+        $stmt->bindParam(':id_theme', $id_theme, PDO::PARAM_INT);
+        $stmt->execute();
+        $result = $stmt;
+    } catch (PDOException $e) {
+        die("Erreur de connexion à la base de données : " . $e->getMessage());
     }
-
-    // Récupérer les chapitres associés
-    $stmt = $pdo->prepare("SELECT id_chapitre, nom_chapitre FROM Chapitre WHERE id_matiere = ?");
-    $stmt->execute([$id_matiere]);
-    $chapitres = $stmt->fetchAll(PDO::FETCH_ASSOC);
-} catch (PDOException $e) {
-    die("Erreur de connexion à la base de données : " . $e->getMessage());
+} else {
+    die("ID du thème non spécifié.");
 }
-$xyz=$matiere['nom_matiere'];
 ?>
 
 <!DOCTYPE html>
@@ -32,27 +23,38 @@ $xyz=$matiere['nom_matiere'];
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php echo htmlspecialchars($matiere['nom_matiere']); ?></title>
+    <title>Liste des Chapitres</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/public/assets/css/navbar.css"> <!-- Inclure le fichier CSS personnalisé -->
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
 </head>
 <body>
-    <?php require_once '../partials/header.php'; ?>
-    <div class="container mt-5">
-        <h1><?php echo htmlspecialchars($xyz); ?></h1>
-        <ul class="list-group">
-            <?php foreach ($chapitres as $chapitre): ?>
-                <li class="list-group-item">
-                    <a href="chapitre.php?id_chapitre=<?php echo $chapitre['id_chapitre']; ?>">
-                        <?php echo htmlspecialchars($chapitre['nom_chapitre']); ?>
-                    </a>
-                </li>
-            <?php endforeach; ?>
-        </ul>
-    </div>
-    <?php require_once '../partials/footer.php'; ?>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <h1>Liste des Chapitres</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nom</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+    <?php while ($row = $result->fetch(PDO::FETCH_ASSOC)): ?>
+        <tr>
+            <td><a href="souschapitre.php?id_souschapitre=<?php echo htmlspecialchars($row['id_chapitre']); ?>"><?php echo htmlspecialchars($row['nom_chapitre']); ?></a></td>
+            <td><?php echo htmlspecialchars($row['description']); ?></td>
+        </tr>
+    <?php endwhile; ?>
+</tbody>
+    </table>
 </body>
 </html>

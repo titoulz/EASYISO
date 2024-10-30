@@ -42,7 +42,7 @@ if (isset($_SESSION['user_id'])) {
                         </a>
                         <div class="dropdown-menu" aria-labelledby="matiereDropdown">
                             <?php foreach ($matieres as $matiere): ?>
-                                <a class="dropdown-item" href="/partials/chapitres.php?id_matiere=<?php echo $matiere['id_matiere']; ?>">
+                                <a class="dropdown-item" href="/partials/presentation.php">
                                     <?php echo htmlspecialchars($matiere['nom_matiere']); ?>
                                 </a>
                             <?php endforeach; ?>

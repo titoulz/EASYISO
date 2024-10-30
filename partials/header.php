@@ -27,7 +27,7 @@ if (isset($_SESSION['user_id'])) {
     <link rel="stylesheet" href="/public/assets/css/navbar.css"> <!-- Inclure le fichier CSS personnalisé -->
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+<nav class="navbar navbar-expand-lg navbar-light bg-light ">
     <div class="container">
         <a href="/public/index.php" class="navbar-brand">IALEARNING</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

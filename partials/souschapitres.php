@@ -17,11 +17,11 @@ try {
     if (!$sousChapitre) {
         die("Sous-chapitre non trouvé.");
     }
-//recuperer le nom du chapitre associé
+
+    // Récupérer le nom du chapitre associé
     $stmt = $pdo->prepare("SELECT nom_chapitre FROM Chapitre LEFT JOIN SousChapitre ON Chapitre.id_chapitre = SousChapitre.id_chapitre WHERE id_souschapitre = ?");
     $stmt->execute([$id_souschapitre]);
     $chapitre = $stmt->fetch(PDO::FETCH_ASSOC);
-    //recuperer l'a
 
     // Récupérer le contenu du sous-chapitre
     $stmt = $pdo->prepare("SELECT type_contenu, contenu FROM ContenuChapitre WHERE id_chapitre = ?");
@@ -43,8 +43,7 @@ try {
         "model" => "gpt-3.5-turbo",
         "messages" => [
             ["role" => "system", "content" => "Tu es un assistant pédagogique en classe de 4ème au college ."],
-            ["role" => "user", "content" => "Crée une fiche de révision sur le sujet : '$sujet' dans le chapitre '$abc' en utilisant les classes suivantes : <h2 class='fiche-titre'>, <p class='fiche-paragraphe'>, et <ul class='fiche-liste'>. et en etant le plus précis dans les informations"
-]
+            ["role" => "user", "content" => "Crée une fiche de révision sur le sujet : '$sujet' dans le chapitre '$abc' en utilisant les classes suivantes : <h2 class='fiche-titre'>, <p class='fiche-paragraphe'>, et <ul class='fiche-liste'>. et en etant le plus précis dans les informations"]
         ],
     ];
 
@@ -71,7 +70,6 @@ try {
     if (isset($apiResponseData['choices'][0]['message']['content'])) {
         $ficheRevision = $apiResponseData['choices'][0]['message']['content'];
     } else {
-        // Affichez la réponse brute de l'API pour déboguer
         echo "Réponse brute de l'API : " . htmlspecialchars($apiResponse);
         die("Erreur : la fiche de révision n'a pas pu être générée.");
     }
@@ -94,8 +92,9 @@ try {
     <div class="container mt-5">
         <h1><?php echo htmlspecialchars($sousChapitre['nom_souschapitre']); ?></h1>
         <p><?php echo htmlspecialchars($sousChapitre['description']); ?></p>
+        
         <div>
-            <h2>Contenu</h2>
+            <h2>Contenu du Chapitre</h2>
             <?php foreach ($contenus as $contenu): ?>
                 <h3><?php echo htmlspecialchars($contenu['type_contenu']); ?></h3>
                 <p><?php echo nl2br(htmlspecialchars($contenu['contenu'])); ?></p>
@@ -104,10 +103,9 @@ try {
 
         <!-- Affichage de la fiche de révision générée par l'API OpenAI -->
         <div class="fiche-revision">
-    <h2>Fiche de Révision Générée pour le chapitre "<?php echo $chapitre['nom_chapitre']; ?>"</h2>
-    
-    <p><?php echo nl2br($ficheRevision); ?></p>
-</div>
+            <h2 class="fiche-titre">Fiche de Révision pour "<?php echo htmlspecialchars($chapitre['nom_chapitre']); ?>"</h2>
+            <p class="fiche-paragraphe"><?php echo nl2br($ficheRevision); ?></p>
+        </div>
     </div>
     <?php require_once '../partials/footer.php'; ?>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
@@ -115,6 +113,7 @@ try {
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
+
 <style>
     .fiche-revision {
         background-color: #f9f9f9;
@@ -137,16 +136,15 @@ try {
         padding-left: 20px;
     }
     .fiche-titre {
-    color: #003366;
-    font-weight: bold;
-}
-.fiche-paragraphe {
-    color: #333;
-    font-size: 16px;
-}
-.fiche-liste {
-    padding-left: 20px;
-    list-style-type: square;
-}
-
+        color: #003366;
+        font-weight: bold;
+    }
+    .fiche-paragraphe {
+        color: #333;
+        font-size: 16px;
+    }
+    .fiche-liste {
+        padding-left: 20px;
+        list-style-type: square;
+    }
 </style>

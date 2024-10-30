@@ -53,7 +53,7 @@ if (!empty($message)) {
         $stmt = $pdo->prepare("INSERT INTO chat (user_id, question, response) VALUES (?, ?, ?)");
         $stmt->execute([$_SESSION['user_id'], $message, $response]);
 
-        echo $response;
+       
     } else {
         echo "Erreur dans la réponse de l'API.";
     }
@@ -124,7 +124,7 @@ $chats = $stmt->fetchAll(PDO::FETCH_ASSOC);
 </head>
 <body>
     <div class="chat-container mt-5">
-        <h2 class="text-center mb-4">Chat avec l'IA</h2>
+        <h2 class="text-center mb-4">chatbox</h2>
         
         <div id="chat-box">
             <?php foreach ($chats as $chat): ?>
@@ -137,7 +137,7 @@ $chats = $stmt->fetchAll(PDO::FETCH_ASSOC);
             <?php endforeach; ?>
         </div>
 
-        <form action="" method="post">
+        <form action="" method="post" id="chat-form">
             <div class="form-group">
                 <input type="text" class="form-control" id="message" name="message" placeholder="Tapez votre message..." required>
                 <button type="submit" class="btn btn-primary send-button">Envoyer</button>
@@ -148,5 +148,15 @@ $chats = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <script>
+        // Soumettre le formulaire avec la touche "Entrée"
+        document.getElementById("message").addEventListener("keypress", function(event) {
+            if (event.key === "Enter") {
+                event.preventDefault(); // Empêche le saut de ligne par défaut
+                document.getElementById("chat-form").submit(); // Soumet le formulaire
+            }
+        });
+    </script>
 </body>
 </html>

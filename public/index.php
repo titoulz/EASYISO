@@ -78,8 +78,8 @@ if ($action == 'logout') {
 <body>
     <?php require_once '../partials/header.php'; ?>
     <div class="container mt-5">
-        <h1>Accueil</h1>
-        <p>Bienvenue sur IALEARNING, la plateforme d'apprentissage de l'intelligence artificielle.</p>
+        <h1>easy iso</h1>
+        <p>bienvenu sur ISO 27001</p>
     <?php require_once '../partials/footer.php'; ?>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>

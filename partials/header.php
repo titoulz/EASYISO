@@ -5,15 +5,6 @@ if (session_status() == PHP_SESSION_NONE) {
 
 require_once __DIR__.'/../config/database.php';
 
-$matieres = [];
-if (isset($_SESSION['user_id'])) {
-    try {
-        $stmt = $pdo->query("SELECT id_matiere, nom_matiere FROM matiere");
-        $matieres = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    } catch (PDOException $e) {
-        die("Erreur de connexion à la base de données : " . $e->getMessage());
-    }
-}
 ?>
 
 <!DOCTYPE html>
@@ -21,7 +12,7 @@ if (isset($_SESSION['user_id'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IALEARNING</title>
+    <title>EASYISO</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="/public/assets/css/navbar.css"> <!-- Inclure le fichier CSS personnalisé -->
@@ -29,27 +20,19 @@ if (isset($_SESSION['user_id'])) {
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light ">
     <div class="container">
-        <a href="/public/index.php" class="navbar-brand">IALEARNING</a>
+        <a href="/public/index.php" class="navbar-brand">EASYISO</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <?php if (isset($_SESSION['user_id'])): ?>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="matiereDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="fas fa-book-open"></i>   Matières
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="matiereDropdown">
-                            <?php foreach ($matieres as $matiere): ?>
-                                <a class="dropdown-item" href="/partials/presentation.php">
-                                    <?php echo htmlspecialchars($matiere['nom_matiere']); ?>
-                                </a>
-                            <?php endforeach; ?>
-                        </div>
-                    </li>
+                 
                     <li class="nav-item"><a href="/partials/api/chat.php" class="nav-link"><i class="fas fa-comments"></i> Chat</a></li>
                     <li class="nav-item"><a href="/public/index.php?action=dashboard" class="nav-link"><i class="fas fa-tachometer-alt"></i> Tableau de bord</a></li>
+                    <li class ="nav-item"><a href="/partials/mycorp.php" class="nav-link"><i class="fas fa-question"></i> Mon entreprise</a></li>
+                    <li class="nav-item"><a href="/partials/question_chatgpt.php" class="nav-link">generer vtre template</a></li>
+                    <li class="nav-item"><a href="/partials/clauses.php" class="nav-link">clauses de securite</a></li>
                     <li class="nav-item"><a href="/partials/logout.php" class="nav-link"><i class="fas fa-sign-out-alt"></i> Déconnexion</a></li>
                 <?php else: ?>
                     <li class="nav-item"><a href="/views/register.php" class="nav-link">Inscription</a></li>

@@ -1,6 +1,6 @@
 <footer class="footer mt-auto py-3 bg-light">
     <div class="container">
-        <p class="text-muted">&copy; <?php echo date("Y"); ?> Mon Application. Tous droits réservés.</p>
+        <p class="text-muted">&copy; <?php echo date("Y"); ?> EASY ISO. Tous droits réservés.</p>
         <ul class="list-inline">
             <li class="list-inline-item"><a href="/public/index.php?action=about">À propos</a></li>
             <li class="list-inline-item"><a href="/public/index.php?action=contact">Contact</a></li>

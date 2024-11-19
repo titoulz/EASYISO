@@ -1,0 +1,34 @@
+**1. Introduction**
+Le présent document expose les étapes du processus disciplinaire à suivre en cas de violation de la sécurité de l'information chez Predimed. L'objectif est de garantir une gestion efficace et appropriée des incidents de violation pouvant compromettre la sécurité des données de l'entreprise.
+
+**2. Étapes du processus**
+
+**2.1 Détection de la violation de la sécurité de l'information**
+Dès la détection d'une violation de la sécurité de l'information, le responsable de la sécurité de l'information ou toute personne témoin de l'incident doit rédiger un rapport détaillé.
+
+**2.2 Évaluation de la violation**
+Une évaluation approfondie de la violation de la sécurité de l'information doit être réalisée afin de déterminer la nature et l'ampleur de l'incident.
+
+**2.3 Notification des parties concernées**
+Toutes les parties impliquées, y compris la direction, le personnel en lien avec l'incident et les responsables de la sécurité de l'information, doivent être notifiées de manière prompte et adéquate.
+
+**2.4 Enquête approfondie**
+Une enquête approfondie sera conduite pour identifier les causes de la violation et déterminer les individus responsables de l'incident.
+
+**2.5 Prise de mesures correctives**
+Une fois les responsables identifiés, des mesures correctives appropriées devront être mises en place pour remédier à la violation de la sécurité de l'information.
+
+**2.6 Sanctions disciplinaires**
+En cas de violation intentionnelle ou gravement négligente, des sanctions disciplinaires pourront être prises à l'encontre des personnes responsables, conformément aux politiques internes de Predimed.
+
+**3. Mesures applicables**
+Les mesures pouvant être appliquées suite à une violation de la sécurité de l'information comprennent :
+- Formation supplémentaire sur les politiques de sécurité de l'information.
+- Réaffectation des responsabilités.
+- Suspension temporaire.
+- Résiliation de contrat.
+
+**4. Communication des décisions**
+Toutes les décisions prises dans le cadre du processus disciplinaire devront être communiquées de manière claire et transparente aux parties concernées. Une communication efficace est essentielle pour assurer la compréhension des conséquences des violations de la sécurité de l'information.
+
+En mettant en œuvre ce processus disciplinaire, Predimed renforce sa posture en matière de sécurité de l'information et assure la conformité aux exigences de la norme ISO/IEC 27001.

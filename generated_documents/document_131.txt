@@ -1,0 +1,35 @@
+**Procédures d'exploitation documentées pour les moyens de traitement de l'information de l'entreprise Predimed**
+
+1. **Introduction**
+Les procédures d'exploitation documentées suivantes ont pour objectif de définir les règles et les processus à suivre pour assurer une utilisation appropriée et sécurisée des moyens de traitement de l'information de l'entreprise Predimed, conformément à la clause 5.37 de l'ISO/IEC 27001.
+
+2. **Responsabilités**
+2.1. Le Responsable de la Sécurité de l'Information (RSI) est responsable de veiller à la mise en œuvre et au respect des procédures d'exploitation documentées pour les moyens de traitement de l'information.
+2.2. Les employés qui utilisent les moyens de traitement de l'information sont tenus de suivre scrupuleusement les procédures établies dans le cadre de leurs activités quotidiennes.
+
+3. **Accès aux Moyens de Traitement de l'Information**
+3.1. Tout accès aux moyens de traitement de l'information doit être autorisé par le RSI ou par une personne désignée par celui-ci.
+3.2. Chaque utilisateur doit disposer d'un identifiant unique pour accéder aux moyens de traitement de l'information.
+3.3. Les identifiants et les mots de passe doivent être protégés et tenus confidentiels.
+
+4. **Utilisation des Moyens de Traitement de l'Information**
+4.1. Les utilisateurs sont tenus d'utiliser les moyens de traitement de l'information uniquement aux fins pour lesquelles ils ont été autorisés.
+4.2. Il est interdit de copier, supprimer ou modifier des informations sans autorisation préalable.
+4.3. Les utilisateurs doivent s'abstenir de toute action susceptible de compromettre la sécurité ou l'intégrité des moyens de traitement de l'information.
+
+5. **Sauvegarde des Données**
+5.1. Les données doivent être régulièrement sauvegardées conformément aux politiques de sauvegarde établies par l'entreprise.
+5.2. Les sauvegardes doivent être stockées dans des endroits sécurisés et protégées contre tout accès non autorisé.
+
+6. **Maintenance des Moyens de Traitement de l'Information**
+6.1. Les moyens de traitement de l'information doivent être régulièrement entretenus pour garantir leur bon fonctionnement et leur sécurité.
+6.2. Toute anomalie ou dysfonctionnement constaté doit être signalé immédiatement au service informatique.
+
+7. **Formation et Sensibilisation**
+7.1. Les utilisateurs des moyens de traitement de l'information doivent recevoir une formation adéquate sur les procédures à suivre et les bonnes pratiques de sécurité.
+7.2. Une sensibilisation régulière sur les risques liés à l'utilisation des moyens de traitement de l'information doit être assurée.
+
+8. **Révision des Procédures**
+Les procédures d'exploitation documentées pour les moyens de traitement de l'information doivent être régulièrement révisées et mises à jour pour prendre en compte les évolutions technologiques et les nouveaux risques de sécurité.
+
+Ces procédures d'exploitation documentées doivent être appliquées de manière rigoureuse par l'ensemble des collaborateurs de l'entreprise Predimed afin de garantir la sécurité et la confidentialité des informations traitées.

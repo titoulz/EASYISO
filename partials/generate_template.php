@@ -44,34 +44,30 @@ if (!$entreprise) {
 // Préparer la demande pour OpenAI
 require_once __DIR__ . '/../vendor/autoload.php'; // Charger l'autoloader Composer
 
-// Créez une instance du client OpenAI avec votre clé API
+// Créer une instance du client OpenAI avec votre clé API
 $openai_api_key = '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'; // Remplacez par votre clé API réelle
 $client = \OpenAI::client($openai_api_key);
 
-$prompt = "Génère un document pour l'entreprise suivante en utilisant les informations de la clause pour démontrer la conformité. Le document doit être détaillé, compatible avec Bootstrap pour le rendu HTML, et structuré de manière à montrer comment l'entreprise répond à la clause spécifiée. Utilisez les classes Bootstrap pour garantir une mise en page réactive et bien structurée :\n";
-$prompt .= "Nom de l'entreprise: " . $entreprise['nom_entreprise'] . "\n";
-$prompt .= "Adresse: " . $entreprise['adresse'] . ", " . $entreprise['code_postal'] . " " . $entreprise['ville'] . ", " . $entreprise['pays'] . "\n";
-$prompt .= "Contexte: " . $entreprise['contexte'] . "\n";
-$prompt .= "Objectif: " . $entreprise['objectif'] . "\n";
-$prompt .= "Domaine: " . $entreprise['domaine'] . "\n\n";
-$prompt .= "Clause : " . $clause['numero_clause'] . " - " . $clause['sous_categorie'] . "\n";
-$prompt .= $clause['description'] . "\n\n";
-$prompt .= "Veuillez fournir une explication détaillée et un plan de mise en œuvre basé sur les exigences de cette clause.";
+$prompt = $clause['prompt_associated']; // Utiliser le prompt associé à la clause depuis la base de données
+$prompt = str_replace('[nom de l\'organisation]', $entreprise['nom_entreprise'], $prompt);
 
 // Utilisation du point de terminaison 'chat' pour les modèles comme 'gpt-3.5-turbo'
 $response = $client->chat()->create([
-    'model' => 'gpt-3.5-turbo', // Utilisez le modèle approprié
+    'model' => 'gpt-3.5-turbo',
     'messages' => [
         ['role' => 'system', 'content' => 'Vous êtes un assistant qui génère des documents professionnels détaillés et conformes.'],
         ['role' => 'user', 'content' => $prompt],
     ],
 ]);
 
-// Vérifier si la réponse contient des données
 if (isset($response['choices'][0]['message']['content'])) {
     $generated_content = $response['choices'][0]['message']['content'];
 
-    // Conversion de la réponse générée en HTML
+    // Sauvegarder le contenu généré dans un fichier
+    $file_path = __DIR__ . '/../generated_documents/document_' . $clause_id . '.txt';
+    file_put_contents($file_path, $generated_content);
+
+    // Affichage du contenu généré et formulaire d'édition
     echo '<!DOCTYPE html>
     <html lang="fr">
     <head>
@@ -80,16 +76,112 @@ if (isset($response['choices'][0]['message']['content'])) {
         <title>Document Généré</title>
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     </head>
-    <body>
-        <div class="container mt-4">
-            <!-- Affichage du contenu généré -->
-            ' . $generated_content . '
-        </div>
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.4.4/dist/umd/popper.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    </body>
-    </html>';
+    <body>';
+
+    include __DIR__ . '/../partials/header.php';
+
+    echo '<div class="container mt-4">
+            <!-- Formulaire permettant de modifier ou de poser une question sur le contenu généré -->
+            <form method="POST" action="">
+                <div class="form-group">
+                    <label for="generated-content">Contenu généré (modifiable) :</label>
+                    <textarea class="form-control" id="generated-content" name="generated_content" rows="10">' . htmlspecialchars($generated_content) . '</textarea>
+                </div>
+                <div class="form-group">
+                    <label for="user-feedback">Poser une question supplémentaire ou apporter des précisions :</label>
+                    <textarea class="form-control" id="user-feedback" name="user_feedback" rows="4" placeholder="Ajoutez vos précisions ou questions ici..."></textarea>
+                </div>
+                <button type="submit" name="submit_question" class="btn btn-primary">Soumettre la question</button>
+            </form>
+            <br>
+            <!-- Bouton de téléchargement du fichier généré -->
+            <a href="../generated_documents/document_' . $clause_id . '.txt" download="document_' . $clause_id . '.txt" class="btn btn-success">Télécharger le document généré</a>
+        </div>';
+
+    // Enregistrer la version initiale
+    echo '<div class="container mt-4">
+            <form method="POST" action="">
+                <input type="hidden" name="save_initial_content" value="1">
+                <input type="hidden" id="generated-content-hidden" name="generated_content_hidden" value="' . htmlspecialchars($generated_content) . '">
+                <button type="submit" class="btn btn-secondary">Enregistrer la version actuelle</button>
+            </form>
+        </div>';
+
+    echo '</body></html>';
 } else {
     echo json_encode(['error' => 'Aucune réponse générée par l\'API']);
 }
+
+// Traitement des modifications ou des questions de l'utilisateur
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if (isset($_POST['submit_question'])) {
+        $user_feedback = trim($_POST['user_feedback']);
+        $edited_content = trim($_POST['generated_content']);
+
+        $new_prompt = "Voici un contenu généré précédemment basé sur les exigences d'une clause spécifique :\n";
+        $new_prompt .= $edited_content . "\n\n";
+        if (!empty($user_feedback)) {
+            $new_prompt .= "L'utilisateur a posé la question ou apporté les précisions suivantes :\n";
+            $new_prompt .= $user_feedback . "\n\n";
+        }
+        $new_prompt .= "Veuillez fournir une version mise à jour du document, en tenant compte des modifications et précisions fournies.";
+
+        // Utilisation de l'API OpenAI pour ajuster le contenu
+        $response = $client->chat()->create([
+            'model' => 'gpt-3.5-turbo',
+            'messages' => [
+                ['role' => 'system', 'content' => 'Vous êtes un assistant qui génère des documents professionnels détaillés et conformes.'],
+                ['role' => 'user', 'content' => $new_prompt],
+            ],
+        ]);
+
+        if (isset($response['choices'][0]['message']['content'])) {
+            $updated_content = $response['choices'][0]['message']['content'];
+
+            // Sauvegarder la version mise à jour
+            file_put_contents($file_path, $updated_content);
+
+            echo '<div class="container mt-4">
+                    <h3>Contenu Mis à Jour :</h3>
+                    <div id="updated-content">' . nl2br(htmlspecialchars($updated_content)) . '</div>
+                    <br>
+                    <form method="POST" action="">
+                        <input type="hidden" name="save_updated_content" value="1">
+                        <textarea class="form-control" id="updated-content" name="updated_content" rows="10">' . htmlspecialchars($updated_content) . '</textarea>
+                        <button type="submit" class="btn btn-primary mt-2">Enregistrer la version mise à jour</button>
+                    </form>
+                  </div>';
+        } else {
+            echo '<div class="container mt-4"><p class="text-danger">Erreur : Aucune mise à jour générée par l\'API.</p></div>';
+        }
+    }
+
+    // Enregistrer la version mise à jour si le bouton est cliqué
+    if (isset($_POST['save_updated_content'])) {
+        $updated_content = trim($_POST['updated_content']);
+        $sql = "INSERT INTO generated_documents (clause_id, user_id, content) VALUES (:clause_id, :user_id, :content)
+                ON DUPLICATE KEY UPDATE content = :content";
+        $stmt = $pdo->prepare($sql);
+        $stmt->bindParam(':clause_id', $clause_id, PDO::PARAM_INT);
+        $stmt->bindParam(':user_id', $user_id, PDO::PARAM_INT);
+        $stmt->bindParam(':content', $updated_content, PDO::PARAM_STR);
+        $stmt->execute();
+
+        echo "<div class='alert alert-success'>Version mise à jour enregistrée avec succès.</div>";
+    }
+
+    // Enregistrer la version initiale si le bouton "Enregistrer la version actuelle" est cliqué
+    if (isset($_POST['save_initial_content'])) {
+        $initial_content = trim($_POST['generated_content_hidden']);
+        $sql = "INSERT INTO generated_documents (clause_id, user_id, content) VALUES (:clause_id, :user_id, :content)
+                ON DUPLICATE KEY UPDATE content = :content";
+        $stmt = $pdo->prepare($sql);
+        $stmt->bindParam(':clause_id', $clause_id, PDO::PARAM_INT);
+        $stmt->bindParam(':user_id', $user_id, PDO::PARAM_INT);
+        $stmt->bindParam(':content', $initial_content, PDO::PARAM_STR);
+        $stmt->execute();
+
+        echo "<div class='alert alert-success'>Version initiale enregistrée avec succès.</div>";
+    }
+}
+?>

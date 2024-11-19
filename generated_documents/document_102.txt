@@ -1,0 +1,12 @@
+**Inventaire des actifs d'information de PrediMed**
+
+| Actif d'information     | Propriétaire       | Niveau de classification | Mesures de protection                                 |
+|--------------------------|--------------------|-------------------------|-------------------------------------------------------|
+| Base de données client   | Responsable CRM    | Confidentiel            | Chiffrement, contrôle d'accès restrictif              |
+| Application web          | Directeur technique| Restreint               | Pare-feu, authentification forte                      |
+| Données financières      | Responsable financier| Sensible              | Accès restreint, audit trails                         |
+| Documentation interne    | Responsable RH     | Interne                 | Politique de sécurité, contrôle version              |
+| Serveurs de stockage     | Administrateur Système| Restreint            | Sauvegardes régulières, détection d'intrusion         |
+| Base de données RH       | Responsable RH     | Sensible                 | Chiffrement, contrôle d'accès restreint               |
+
+Cet inventaire des actifs d'information de PrediMed est établi conformément à la clause 5.9 de l'ISO/IEC 27001, en identifiant les propriétaires, les niveaux de classification et les mesures de protection associées à chaque actif.

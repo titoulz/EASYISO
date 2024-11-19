@@ -31,8 +31,9 @@ require_once __DIR__.'/../config/database.php';
                     <li class="nav-item"><a href="/partials/api/chat.php" class="nav-link"><i class="fas fa-comments"></i> Chat</a></li>
                     <li class="nav-item"><a href="/public/index.php?action=dashboard" class="nav-link"><i class="fas fa-tachometer-alt"></i> Tableau de bord</a></li>
                     <li class ="nav-item"><a href="/partials/mycorp.php" class="nav-link"><i class="fas fa-question"></i> Mon entreprise</a></li>
-                    <li class="nav-item"><a href="/partials/question_chatgpt.php" class="nav-link">generer vtre template</a></li>
-                    <li class="nav-item"><a href="/partials/clauses.php" class="nav-link">clauses de securite</a></li>
+                    <li class="nav-item"><a href="/partials/clauses.php" class="nav-link"><i class="fas fa-book"></i>clauses de securite</a></li>
+                    <li class="nav-item"><a href="/partials/documents.php" class="nav-link"><i class="fas fa-file-alt"></i> Documents</a></li>
+                    <li class="nav-item"><a href="/partials/gestion_clause.php" class="nav-link"><i class="fas fa-file-alt"></i> Gestion des clauses </a></li>
                     <li class="nav-item"><a href="/partials/logout.php" class="nav-link"><i class="fas fa-sign-out-alt"></i> Déconnexion</a></li>
                 <?php else: ?>
                     <li class="nav-item"><a href="/views/register.php" class="nav-link">Inscription</a></li>

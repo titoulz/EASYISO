@@ -1,0 +1,25 @@
+**Politique de Sécurité de l'Information - Predimed**
+
+**1. Engagement de la Direction**
+
+Chez Predimed, la direction s'engage à soutenir pleinement le Système de Management de la Sécurité de l'Information (SMSI) afin de garantir la confidentialité, l'intégrité et la disponibilité des informations critiques de l'entreprise. La direction reconnaît l'importance de la sécurité de l'information pour assurer la confiance des clients, des partenaires et des parties prenantes, ainsi que pour se conformer aux exigences légales et réglementaires.
+
+**2. Objectifs de Sécurité**
+
+Les objectifs de sécurité de Predimed sont les suivants :
+- Protéger les informations sensibles des clients, des employés et de l'entreprise contre tout accès non autorisé.
+- Garantir l'intégrité des données en veillant à ce qu'elles restent exactes, complètes et fiables en tout temps.
+- Assurer la disponibilité des systèmes d'information critiques pour maintenir la continuité des activités de l'entreprise.
+
+**3. Cadre pour l'Amélioration Continue**
+
+Predimed s'engage à suivre un processus d'amélioration continue pour renforcer en permanence le SMSI. Ce processus inclura :
+- L'évaluation régulière des risques et des vulnérabilités pour identifier les menaces potentielles à la sécurité de l'information.
+- La mise en œuvre de mesures de sécurité appropriées pour atténuer les risques identifiés et renforcer la résilience du système.
+- La formation et la sensibilisation des employés à la sécurité de l'information pour créer une culture de sécurité forte au sein de l'entreprise.
+- La surveillance et la vérification régulières du SMSI pour s'assurer de sa conformité aux normes et de son efficacité.
+
+Cette politique de sécurité de l'information est un document contraignant pour tous les employés de Predimed, qui sont tenus de la respecter en tout temps. La direction s'engage à fournir les ressources nécessaires pour mettre en œuvre et maintenir efficacement le SMSI conformément à cette politique.
+
+**Date d'approbation :**
+**Signé par :** Direction de Predimed

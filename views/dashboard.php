@@ -38,9 +38,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <link rel="stylesheet" href="/../public/assets/css/style.css">
 </head>
 <body>
+
     <?php require_once '../partials/header.php'; ?>
+    <h1>Tableau de bord</h1>
     <div class="container mt-5">
-        <h1>Tableau de bord</h1>
+        <h2> Entreprise</h2>
+        <a href="/partials/mycorp.php" class="btn btn-primary">GERER VOTRE ENTREPRISE</a>
+    </div>
+    <div class="container mt-5">
+    <h2> Changer votre mot de passe</h2>
         <?php if (isset($error)): ?>
             <div class="alert alert-danger"><?php echo $error; ?></div>
         <?php endif; ?>
@@ -63,6 +69,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <button type="submit" class="btn btn-primary">Modifier le mot de passe</button>
         </form>
     </div>
+   
     <?php require_once '../partials/footer.php'; ?>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>

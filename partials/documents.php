@@ -30,11 +30,12 @@ foreach ($clauses as $clause) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clauses de Sécurité par Chapitres</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
     <?php require_once 'header.php'; ?>
 </head>
 <body>
     <div class="container mt-4">
-        <h1>Clauses de Sécurité par Chapitres</h1>
+        <h1>MES DOCUMENTS</h1>
         <div class="accordion" id="chapterAccordion">
             <?php foreach ($groupedClauses as $chapter => $clauses): ?>
             <div class="card">
@@ -61,7 +62,7 @@ foreach ($clauses as $clause) {
                                     <div class="card-body">
                                         <h5>Catégorie : <?= htmlspecialchars($clause['categorie']) ?></h5>
                                         <p><?= nl2br(htmlspecialchars($clause['description'])) ?></p>
-                                        <a href="generate_template.php?clause_id=<?= urlencode($clause['id']) ?>" class="btn btn-primary">Générer votre template</a>
+                                        <button> <a href="document.php?clause_id=<?= urlencode($clause['id']) ?>" class="btn btn-primary">VOIR VOTRE DOCUMENT</a></button>
                                     </div>
                                 </div>
                             </div>
@@ -79,6 +80,6 @@ foreach ($clauses as $clause) {
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 <footer>
-       <?php require_once __DIR__.'/../partials/footer.php';?>
-        </footer>
+    <?php require_once 'footer.php'; ?>
+</footer>
 </html>

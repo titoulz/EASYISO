@@ -78,9 +78,18 @@ if ($action == 'logout') {
 <body>
     <?php require_once '../partials/header.php'; ?>
     <div class="container mt-5">
-        <h1>easy iso</h1>
         <p>bienvenu sur ISO 27001</p>
-    <?php require_once '../partials/footer.php'; ?>
+        <p> Cette plateforme propose une gamme complète de templates personnalisés pour la certification ISO 27001, conçus pour simplifier et accélérer la mise en conformité des entreprises avec les normes de sécurité de l'information.</p>
+        <h4 class="text-center">ACTIONS:</h4>
+        <br>
+    <a class="btn btn-primary" href="/partials/clauses.php">VOIR LES CLAUSES</a>
+    <a class="btn btn-primary" href="/partials/documents.php">VOIR MES DOCUMENTS</a>
+    <a class="btn btn-primary" href="/partials/gestion_clause.php">VOIR MES CLAUSES</a>
+    <a class="btn btn-primary" href="/partials/mycorp.php">GERER MON ENTREPRISE</a>
+    <a class="btn btn-primary" href="index.php?action=dashboard">GERER MON COMPTE</a>
+    <a class="btn btn-primary" href="/partials/api/chat.php">Poser une Question</a>
+</div>
+        <?php require_once '../partials/footer.php'; ?>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

@@ -1,0 +1,25 @@
+**Politique de sécurité pour le travail à distance à Predimed**
+
+Dans le cadre de la mise en place d'une politique de sécurité pour le travail à distance à Predimed, voici les exigences, les outils autorisés et les procédures de contrôle conformes à la clause 6.7 de l'ISO/IEC 27001.
+
+**Exigences :**
+
+1. Tous les employés autorisés à travailler à distance doivent lire, comprendre et respecter la politique de sécurité de l'entreprise.
+2. L'accès aux données et aux systèmes informatiques de l'entreprise depuis des postes distants est strictement limité aux seuls employés autorisés.
+3. Les employés doivent utiliser uniquement des équipements approuvés par l'entreprise pour le travail à distance.
+4. Les employés doivent se conformer aux consignes de sécurité spécifiques à l'utilisation des outils informatiques à distance.
+
+**Outils autorisés :**
+
+1. Connexion sécurisée VPN (Réseau Privé Virtuel) : pour permettre aux employés d'accéder de manière sécurisée aux ressources de l'entreprise.
+2. Outils de communication sécurisés : tels que des messageries cryptées, des visioconférences sécurisées, etc.
+3. Sécurité des périphériques : utilisation de clés USB sécurisées, restrictions d'utilisation de périphériques externes, etc.
+
+**Procédures de contrôle :**
+
+1. Surveillance des activités des employés à distance pour détecter toute activité suspecte ou non conforme.
+2. Gestion des identités et des accès : attribution de droits d'accès appropriés en fonction des besoins de l'employé.
+3. Cryptage des données sensibles : toutes les données transmises ou stockées doivent être cryptées pour prévenir les violations de données.
+4. Mises à jour régulières des logiciels de sécurité sur les périphériques utilisés pour le travail à distance.
+
+Cette politique de sécurité pour le travail à distance à Predimed vise à garantir la confidentialité, l'intégrité et la disponibilité des données et des systèmes informatiques de l'entreprise, tout en assurant une productivité maximale des employés travaillant à distance. Tous les employés sont tenus de se conformer strictement à ces directives pour garantir la sécurité de l'entreprise.

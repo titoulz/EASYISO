@@ -8,6 +8,8 @@ $user_id = $_SESSION['user_id'] ?? null;
 
 // Initialiser les variables
 $nom_entreprise = $adresse = $code_postal = $ville = $pays = $telephone = $contexte = $objectif = $domaine = "";
+$structure_organisation = $politiques_existantes = $actifs_information = $reglementations_applicables = "";
+$roles_responsabilites = $contacts_cles = $environnement_technologique = $approche_risques = "";
 
 // Si l'utilisateur est identifié, récupérer ses informations
 if ($user_id) {
@@ -28,6 +30,14 @@ if ($user_id) {
         $contexte = $entreprise['contexte'];
         $objectif = $entreprise['objectif'];
         $domaine = $entreprise['domaine'];
+        $structure_organisation = $entreprise['structure_organisation'];
+        $politiques_existantes = $entreprise['politiques_existantes'];
+        $actifs_information = $entreprise['actifs_information'];
+        $reglementations_applicables = $entreprise['reglementations_applicables'];
+        $roles_responsabilites = $entreprise['roles_responsabilites'];
+        $contacts_cles = $entreprise['contacts_cles'];
+        $environnement_technologique = $entreprise['environnement_technologique'];
+        $approche_risques = $entreprise['approche_risques'];
     }
 }
 
@@ -42,6 +52,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $contexte = $_POST['contexte'] ?? '';
     $objectif = $_POST['objectif'] ?? '';
     $domaine = $_POST['domaine'] ?? '';
+    $structure_organisation = $_POST['structure_organisation'] ?? '';
+    $politiques_existantes = $_POST['politiques_existantes'] ?? '';
+    $actifs_information = $_POST['actifs_information'] ?? '';
+    $reglementations_applicables = $_POST['reglementations_applicables'] ?? '';
+    $roles_responsabilites = $_POST['roles_responsabilites'] ?? '';
+    $contacts_cles = $_POST['contacts_cles'] ?? '';
+    $environnement_technologique = $_POST['environnement_technologique'] ?? '';
+    $approche_risques = $_POST['approche_risques'] ?? '';
 
     if ($user_id && $entreprise) {
         // Mise à jour des informations existantes
@@ -54,14 +72,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     telephone = :telephone, 
                     contexte = :contexte, 
                     objectif = :objectif, 
-                    domaine = :domaine 
+                    domaine = :domaine,
+                    structure_organisation = :structure_organisation,
+                    politiques_existantes = :politiques_existantes,
+                    actifs_information = :actifs_information,
+                    reglementations_applicables = :reglementations_applicables,
+                    roles_responsabilites = :roles_responsabilites,
+                    contacts_cles = :contacts_cles,
+                    environnement_technologique = :environnement_technologique,
+                    approche_risques = :approche_risques
                 WHERE user_id = :user_id";
         $stmt = $pdo->prepare($sql);
         $stmt->bindParam(':user_id', $user_id, PDO::PARAM_INT);
     } else {
         // Insérer de nouvelles informations si elles n'existent pas
-        $sql = "INSERT INTO ENTREPRISE (user_id, nom_entreprise, adresse, code_postal, ville, pays, telephone, contexte, objectif, domaine) 
-                VALUES (:user_id, :nom_entreprise, :adresse, :code_postal, :ville, :pays, :telephone, :contexte, :objectif, :domaine)";
+        $sql = "INSERT INTO ENTREPRISE (user_id, nom_entreprise, adresse, code_postal, ville, pays, telephone, contexte, objectif, domaine, structure_organisation, politiques_existantes, actifs_information, reglementations_applicables, roles_responsabilites, contacts_cles, environnement_technologique, approche_risques) 
+                VALUES (:user_id, :nom_entreprise, :adresse, :code_postal, :ville, :pays, :telephone, :contexte, :objectif, :domaine, :structure_organisation, :politiques_existantes, :actifs_information, :reglementations_applicables, :roles_responsabilites, :contacts_cles, :environnement_technologique, :approche_risques)";
         $stmt = $pdo->prepare($sql);
         $stmt->bindParam(':user_id', $user_id, PDO::PARAM_INT);
     }
@@ -75,6 +101,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->bindParam(':contexte', $contexte);
     $stmt->bindParam(':objectif', $objectif);
     $stmt->bindParam(':domaine', $domaine);
+    $stmt->bindParam(':structure_organisation', $structure_organisation);
+    $stmt->bindParam(':politiques_existantes', $politiques_existantes);
+    $stmt->bindParam(':actifs_information', $actifs_information);
+    $stmt->bindParam(':reglementations_applicables', $reglementations_applicables);
+    $stmt->bindParam(':roles_responsabilites', $roles_responsabilites);
+    $stmt->bindParam(':contacts_cles', $contacts_cles);
+    $stmt->bindParam(':environnement_technologique', $environnement_technologique);
+    $stmt->bindParam(':approche_risques', $approche_risques);
 
     if ($stmt->execute()) {
         echo "<div class='alert alert-success'>Les informations ont été enregistrées avec succès.</div>";
@@ -88,7 +122,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IALEARNING</title>
+    <title>Gerer mon entreprise</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="/public/assets/css/navbar.css"> <!-- Inclure le fichier CSS personnalisé -->
@@ -96,7 +130,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 <body>
     <form method="POST" action="">
-        <div class="container">
+        <div class="container ">
             <div class="row">
                 <div class="col-md-6">
                     <h1>Mon entreprise</h1>
@@ -136,11 +170,44 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <label for="domaine">Domaine</label>
                         <input type="text" name="domaine" id="domaine" class="form-control" value="<?php echo htmlspecialchars($domaine); ?>">
                     </div>
+                    <div class="form-group">
+                        <label for="structure_organisation">Structure Organisation</label>
+                        <input type="text" name="structure_organisation" id="structure_organisation" class="form-control" value="<?php echo htmlspecialchars($structure_organisation); ?>">
+                    </div>
+                    <div class="form-group">
+                        <label for="politiques_existantes">Politiques Existantes</label>
+                        <input type="text" name="politiques_existantes" id="politiques_existantes" class="form-control" value="<?php echo htmlspecialchars($politiques_existantes); ?>">
+                    </div>
+                    <div class="form-group">
+                        <label for="actifs_information">Actifs Information</label>
+                        <input type="text" name="actifs_information" id="actifs_information" class="form-control" value="<?php echo htmlspecialchars($actifs_information); ?>">
+                    </div>
+                    <div class="form-group">
+                        <label for="reglementations_applicables">Reglementations Applicables</label>
+                        <input type="text" name="reglementations_applicables" id="reglementations_applicables" class="form-control" value="<?php echo htmlspecialchars($reglementations_applicables); ?>">
+                    </div>
+                    <div class="form-group">
+                        <label for="roles_responsabilites">Roles Responsabilites</label>
+                        <input type="text" name="roles_responsabilites" id="roles_responsabilites" class="form-control" value="<?php echo htmlspecialchars($roles_responsabilites); ?>">
+                    </div>
+                    <div class="form-group">
+                        <label for="contacts_cles">Contacts Clés</label>
+                        <input type="text" name="contacts_cles" id="contacts_cles" class="form-control" value="<?php echo htmlspecialchars($contacts_cles); ?>">
+                    </div>
+                    <div class="form-group">
+                        <label for="environnement_technologique">Environnement Technologique</label>
+                        <input type="text" name="environnement_technologique" id="environnement_technologique" class="form-control" value="<?php echo htmlspecialchars($environnement_technologique); ?>">
+                    </div>
+                    <div class="form-group">
+                        <label for="approche_risques">Approche Risques</label>
+                        <input type="text" name="approche_risques" id="approche_risques" class="form-control" value="<?php echo htmlspecialchars($approche_risques); ?>">
+                    </div>
                     <button type="submit" class="btn btn-primary">Enregistrer</button>
                 </div>
             </div>
         </div>
     </form>
+    <p>Dernière mise à jour: <?php echo $entreprise['updated_at'] ?? 'Jamais'; ?></p>
 </body>
 </html>
 <?php require_once __DIR__.'/footer.php'; ?>

@@ -1,0 +1,21 @@
+**Politique de Gestion des Périmètres de Sécurité Physique à Predimed**
+
+**1. Objectif:**
+L'objectif de cette politique est de définir et de gérer efficacement les périmètres de sécurité physique à Predimed, conformément à la clause 7.1 de l'ISO/IEC 27001, afin de protéger les actifs physiques de l'organisation et de garantir un environnement sûr pour les activités opérationnelles.
+
+**2. Zones de Sécurité:**
+- Zone Publique: Cette zone est accessible au grand public et aux visiteurs et ne contient aucun actif sensible. Un contrôle d'accès limité est mis en place pour surveiller les entrées et les sorties.
+- Zone de Travail: Cette zone est dédiée aux employés et aux prestataires de services autorisés, et contient des actifs sensibles tels que les postes de travail, les serveurs et les données confidentielles. L'accès à cette zone est strictement contrôlé via des badges d'identification et des protocoles d'authentification.
+- Zone Restreinte: Cette zone est réservée aux administrateurs système et aux responsables de la sécurité. L'accès à cette zone est hautement restreint et nécessite des autorisations spéciales.
+
+**3. Contrôles d'Accès:**
+- Identification et Authentification: Tous les employés, visiteurs et prestataires de services doivent s'identifier et s'authentifier à l'aide de badges d'accès, de codes PIN ou de lecteurs biométriques pour entrer dans les zones sécurisées.
+- Surveilllance Vidéo: Des caméras de surveillance sont installées pour surveiller en continu les accès aux zones sensibles et enregistrer les activités suspectes.
+- Système de Contrôle d'Accès: Un système de contrôle d'accès électronique est en place pour limiter l'accès aux zones sensibles uniquement aux personnes autorisées, en fonction de leur rôle et de leur niveau d'autorisation.
+
+**4. Méthodes de Surveillance:**
+- Patrouilles de Sécurité: Des agents de sécurité effectuent régulièrement des patrouilles dans les zones sensibles pour détecter toute activité anormale ou suspecte.
+- Alarmes de Sécurité: Des systèmes d'alarme sont activés pour signaler toute intrusion ou violation des zones sécurisées, déclenchant une alerte immédiate aux équipes de sécurité.
+- Contrôle d'Accès Physique: Les entrées et les sorties des zones sensibles sont surveillées pour s'assurer que seules les personnes autorisées y accèdent.
+
+En adoptant cette politique de gestion des périmètres de sécurité physique, Predimed s'engage à maintenir un environnement sécurisé pour ses activités opérationnelles et à protéger ses actifs physiques contre les menaces internes et externes. Tous les employés et parties prenantes sont tenus de se conformer à ces mesures de sécurité pour garantir le bon fonctionnement de l'organisation.

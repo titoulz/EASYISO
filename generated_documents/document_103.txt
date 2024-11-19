@@ -1,0 +1,33 @@
+**Règles et Procédures d'Utilisation des Informations et Autres Actifs de PrediMed**
+
+**Introduction:**
+Les informations et actifs associés de PrediMed sont des ressources essentielles qui doivent être protégées avec diligence pour garantir la confidentialité, l'intégrité et la disponibilité des actifs conformément à la clause 5.10 de l'ISO/IEC 27001.
+
+**1. Gestion des Accès:**
+- Tous les employés de PrediMed doivent avoir un accès seulement aux informations et actifs nécessaires à l'exécution de leurs tâches.
+- Les autorisations d'accès doivent être attribuées en fonction des besoins et être régulièrement révisées pour s'assurer de leur pertinence continue.
+- Les accès aux informations sensibles doivent être restreints et supervisés en permanence pour éviter toute utilisation non autorisée.
+
+**2. Protection des Données:**
+- Les informations doivent être stockées de manière sécurisée, que ce soit électroniquement ou physiquement, en fonction de leur sensibilité.
+- Des mécanismes de chiffrement doivent être utilisés pour protéger les données en transit et au repos.
+- Les sauvegardes régulières des données doivent être effectuées et stockées en lieu sûr pour garantir la récupération en cas de perte ou de dommage.
+
+**3. Gestion des Supports Physiques:**
+- Les supports physiques contenant des informations sensibles doivent être correctement étiquetés pour indiquer leur niveau de classification et leur propriété.
+- L'accès aux locaux où sont stockés les supports physiques doit être restreint et surveillé en permanence pour éviter les vols ou les pertes.
+
+**4. Politique de Gestion des Appareils Mobiles:**
+- Les appareils mobiles utilisés pour accéder aux informations de PrediMed doivent être protégés par des mécanismes de sécurité appropriés, tels que des mots de passe ou des biométriques.
+- En cas de perte ou de vol d'un appareil mobile, des mesures de précaution telles que la suppression à distance des données doivent être prises pour éviter toute violation de sécurité.
+
+**5. Sensibilisation à la Sécurité de l'Information:**
+- Tous les employés de PrediMed doivent être formés sur les meilleures pratiques de sécurité de l'information et les risques associés à la violation de la confidentialité, de l'intégrité et de la disponibilité des actifs.
+- Des campagnes de sensibilisation régulières doivent être menées pour maintenir une culture de la sécurité au sein de l'organisation.
+
+**6. Gestion des Incidents de Sécurité:**
+- Un processus de gestion des incidents de sécurité doit être établi, documenté et testé régulièrement pour s'assurer de la capacité de l'organisation à répondre rapidement et efficacement aux incidents potentiels.
+- Tous les incidents de sécurité doivent être enregistrés, analysés et traités en temps opportun pour minimiser les impacts sur les actifs de l'organisation.
+
+**Conclusion:**
+En suivant les règles et procédures énoncées ci-dessus, PrediMed pourra garantir la confidentialité, l'intégrité et la disponibilité de ses informations et autres actifs associés conformément à la clause 5.10 de l'ISO/IEC 27001. Il est essentiel de promouvoir une culture de la sécurité de l'information au sein de l'organisation pour assurer une protection adéquate des actifs précieux de l'entreprise.

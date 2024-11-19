@@ -1,0 +1,37 @@
+**Politique de sécurité des terminaux finaux pour predimed conformément à l'ISO/IEC 27001**
+
+Introduction
+
+Dans le cadre de predimed, la sécurité des terminaux finaux des utilisateurs revêt une importance capitale pour prévenir les violations de données et protéger les actifs de l'organisation. Cette politique vise à définir les mesures de sécurité nécessaires pour protéger les terminaux finaux des utilisateurs conformément à la clause 8.1 de l'ISO/IEC 27001.
+
+1. Contrôle d'accès
+
+1.1. **Identification et authentification** : Tous les utilisateurs doivent être identifiés de manière unique et authentifiés avant d'accéder aux terminaux finaux. Les mots de passe doivent respecter des normes de complexité et être changés régulièrement. L'utilisation de l'authentification à facteurs multiples est recommandée pour renforcer la sécurité des accès.
+
+1.2. **Gestion des comptes** : Les droits d'accès des utilisateurs aux terminaux finaux doivent être basés sur le principe du moindre privilège. Les comptes inactifs doivent être désactivés automatiquement après une période définie de non-utilisation.
+
+2. Chiffrement
+
+2.1. **Chiffrement des données** : Toutes les données stockées sur les terminaux finaux devront être chiffrées, en particulier les données sensibles ou confidentielles. Un mécanisme de gestion des clés robuste doit être mis en place pour garantir la sécurité du chiffrement.
+
+2.2. **Chiffrement des communications** : Les communications entre les terminaux finaux et les serveurs doivent être chiffrées en utilisant des protocoles sécurisés comme SSL/TLS pour prévenir toute interception de données.
+
+3. Protection contre les logiciels malveillants
+
+3.1. **Logiciels de sécurité** : Les terminaux finaux doivent être équipés de logiciels de sécurité, tels qu'un antivirus et un anti-malware, régulièrement mis à jour. Des analyses périodiques des systèmes doivent être effectuées pour détecter et supprimer les logiciels malveillants.
+
+3.2. **Sensibilisation** : Les utilisateurs doivent être formés sur les bonnes pratiques en matière de sécurité informatique, notamment sur la sensibilisation aux logiciels malveillants et aux techniques d'ingénierie sociale utilisées par les cybercriminels.
+
+4. Gestion des incidents de sécurité
+
+4.1. **Détection des incidents** : Des mesures de détection des incidents de sécurité sur les terminaux finaux doivent être mises en place, telles que la surveillance des journaux d'événements, pour identifier rapidement toute activité suspecte ou malveillante.
+
+4.2. **Réponse aux incidents** : Un plan de réponse aux incidents de sécurité, incluant des procédures de notification et d'escalade, doit être établi pour traiter efficacement toute menace ou violation potentielle des terminaux finaux. Les incidents doivent être documentés et analysés pour renforcer les mesures de sécurité existantes.
+
+5. Responsabilités
+
+5.1. **Responsabilité de la gestion** : La direction est responsable de la mise en œuvre de cette politique et de s'assurer que les mesures de sécurité sont appliquées et suivies. Des revues régulières de la conformité à la politique de sécurité des terminaux finaux doivent être effectuées.
+
+5.2. **Responsabilité des utilisateurs** : Les utilisateurs sont tenus de respecter les directives de cette politique et de signaler tout incident de sécurité ou toute violation potentielle. Ils doivent coopérer avec les équipes de sécurité pour garantir un environnement d'utilisation sécurisé des terminaux finaux.
+
+Cette politique de sécurité des terminaux finaux pour predimed constitue un cadre robuste visant à garantir la protection des données et la sécurité des actifs de l'organisation. Elle sera régulièrement révisée pour s'adapter aux évolutions technologiques et aux nouvelles menaces de sécurité, et tout non-respect des mesures énoncées pourra entraîner des actions disciplinaires conformément aux politiques internes de l'organisation.

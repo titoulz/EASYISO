@@ -1,0 +1,34 @@
+**Politique de bureau propre et d'écran vide pour Predimed**
+
+*Date d'entrée en vigueur: [à compléter]*
+
+**Introduction:**
+Cette politique vise à garantir un environnement de travail propre et sécurisé pour prévenir tout accès non autorisé aux informations sensibles de Predimed. Elle est conforme à la clause 7.7 de l'ISO/IEC 27001 et s'inscrit dans le cadre des mesures de sécurité de l'entreprise.
+
+**Exigences en matière de rangement:**
+
+1. Tous les documents physiques contenant des données sensibles doivent être rangés dans des armoires verrouillées ou des classeurs sécurisés lorsque non utilisés, conformément aux directives de classification internes.
+2. Les post-it, notes manuscrites ou documents temporaires contenant des informations sensibles doivent être détruits de manière sécurisée après usage, préférablement par déchiquetage ou dans des contenants destinés à cet effet.
+3. Les clés USB et autres supports amovibles contenant des données sensibles doivent être correctement étiquetés et stockés en toute sécurité lorsqu'ils ne sont pas utilisés, en évitant de les laisser sans surveillance.
+4. Les bureaux et espaces de travail doivent être maintenus propres et dégagés pour faciliter l'organisation, la confidentialité et la sécurité des informations, en respectant les consignes de nettoyage et d'organisation.
+
+**Exigences en matière de sécurité des données sensibles:**
+
+1. Les écrans d'ordinateurs et de dispositifs mobiles utilisés pour traiter des données sensibles doivent être configurés pour se verrouiller automatiquement après une période d'inactivité courte, selon les paramètres définis par l'entreprise.
+2. Les employés sont tenus de verrouiller manuellement leur poste de travail lorsqu'ils s'absentent de leur bureau, même pour une courte durée, en utilisant les méthodes de verrouillage prévues (ex. mot de passe, code PIN).
+3. Les informations sensibles affichées à l'écran doivent être masquées ou fermées avant de quitter le poste de travail, pour éviter tout accès non autorisé aux données confidentielles.
+4. Les postes de travail doivent être positionnés de manière à ce que les écrans ne soient pas visibles à partir d'emplacements publics ou non autorisés, en veillant à la confidentialité des informations affichées.
+
+**Responsabilités:**
+
+1. Les employés de Predimed sont tenus de respecter et de mettre en œuvre cette politique, en accordant une importance particulière à la protection des données sensibles de l'entreprise.
+2. Les managers sont responsables de sensibiliser leur équipe aux bonnes pratiques en matière de sécurité des informations, en assurant une formation adéquate et en encourageant la conformité.
+3. Le département de la sécurité de l'information est chargé de surveiller le respect de cette politique, de mettre en place des contrôles appropriés et de fournir la formation nécessaire pour assurer la sécurité des informations.
+
+**Sanctions:**
+Les employés ne respectant pas cette politique peuvent faire l'objet de mesures disciplinaires, pouvant aller jusqu'à la résiliation du contrat de travail, conformément aux procédures en vigueur au sein de l'entreprise.
+
+**Révision de la politique:**
+Cette politique sera révisée régulièrement pour s'assurer de sa pertinence et de son efficacité par rapport aux besoins de sécurité de Predimed, en fonction des évolutions de l'environnement de sécurité et des exigences réglementaires.
+
+Cette politique de bureau propre et d'écran vide pour Predimed vise à assurer la protection et la confidentialité des informations sensibles de l'entreprise en établissant des directives claires et pratiques pour tous les employés, contribuant ainsi à renforcer la sécurité des données et à prévenir les risques liés à la manipulation d'informations confidentielles.

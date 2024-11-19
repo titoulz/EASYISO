@@ -1,0 +1,43 @@
+**Plan de Protection des Services Supports pour Predimed**
+
+**I. Introduction**
+
+Le Plan de Protection des Services Supports de Predimed a pour objectif d'assurer la continuité des activités critiques en conformité avec la clause 7.11 de l'ISO/IEC 27001. Ce plan vise à identifier et mettre en place des mesures de redondance et de continuité pour minimiser les interruptions des services supports essentiels.
+
+**II. Mesures de Redondance**
+
+1. **Redondance des équipements :** 
+   - Mise en place de systèmes de secours pour les équipements critiques.
+   - Utilisation de serveurs redondants pour assurer la disponibilité des services.
+   - Configuration de systèmes de stockage redondants pour éviter toute perte de données.
+
+2. **Redondance des réseaux :** 
+   - Utilisation de connexions Internet multiples pour maintenir la connectivité en cas de défaillance d'un fournisseur.
+   - Mise en place de réseaux virtuels privés (VPN) pour assurer une communication sécurisée et continue.
+
+3. **Redondance des ressources humaines :** 
+   - Identification et formation de personnel de secours pour chaque fonction critique.
+   - Planification de vacations croisées pour garantir la disponibilité des ressources clés en tout temps.
+
+**III. Mesures de Continuité**
+
+1. **Plan de Reprise d'Activité (PRA) :** 
+   - Définition des procédures de reprise d'activité en cas d'incident majeur.
+   - Identification des ressources nécessaires pour rétablir les services dans les délais impartis.
+
+2. **Sauvegarde et restauration des données :** 
+   - Mise en place de politiques de sauvegarde régulières pour prévenir la perte de données.
+   - Validation des procédures de restauration pour garantir une reprise rapide des activités.
+
+3. **Tests de continuité :** 
+   - Organisation régulière d'exercices de simulation pour évaluer l'efficacité du plan de continuité.
+   - Analyse des rapports post-exercices pour identifier les lacunes et les améliorations potentielles.
+
+**IV. Conclusion**
+
+En mettant en œuvre ces mesures de redondance et de continuité, le Plan de Protection des Services Supports de Predimed vise à assurer la résilience des opérations critiques face aux incidents potentiels. Il est essentiel de maintenir ce plan à jour, de former régulièrement le personnel et de réaliser des tests de validation pour garantir une réponse efficace en cas de perturbation des services supports.
+
+Ce plan de protection est conforme à la clause 7.11 de l'ISO/IEC 27001 et contribuera à renforcer la posture de sécurité et de disponibilité de Predimed.
+
+---
+Ceci est une proposition de plan de protection des services supports pour Predimed, en conformité avec la clause 7.11 de l'ISO/IEC 27001. N'hésitez pas à l'adapter selon les besoins spécifiques de votre organisation.

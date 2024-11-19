@@ -1,0 +1,40 @@
+**Fonctions et Responsabilités liées à la Sécurité de l'Information pour Predimed selon l'ISO/IEC 27001 Clause 5.2**
+
+**Structure Hiérarchique :**
+
+1. **Direction Générale :**
+   - Définit la politique de sécurité de l'information (PSI) et les objectifs liés à la sécurité de l'information.
+   - Fournit les ressources nécessaires pour la mise en œuvre de mesures de sécurité de l'information.
+   - Approuve les décisions stratégiques en matière de sécurité de l'information.
+
+2. **RSSI (Responsable de la Sécurité des Systèmes d'Information) :**
+   - Est le garant de la mise en œuvre et de la maintenance du SMSI (Système de Management de la Sécurité de l'Information).
+   - Coordonne les activités liées à la sécurité de l'information.
+   - Identifie et évalue les risques liés à la sécurité de l'information.
+
+3. **Responsables de Département :**
+   - Appliquent les directives de la PSI dans leurs domaines d'activité respectifs.
+   - Assurent la sensibilisation des employés aux enjeux de sécurité de l'information.
+   - Rapportent au RSSI sur les incidents de sécurité de l'information.
+
+**Responsabilités Clés :**
+
+1. **Développement et Maintien de la Politique de Sécurité de l'Information :**
+   - La Direction Générale en est responsable, avec le soutien du RSSI.
+   - La politique doit être claire, communiquée, et régulièrement révisée pour s'aligner sur les objectifs de l'organisation.
+
+2. **Gestion des Risques et des Mesures de Sécurité :**
+   - Le RSSI supervise l'identification, l'évaluation et la gestion des risques en matière de sécurité de l'information.
+   - En fonction des risques identifiés, des mesures appropriées doivent être mises en place et maintenues.
+
+3. **Sensibilisation et Formation :**
+   - Les responsables de département sont chargés de sensibiliser leur équipe aux bonnes pratiques en matière de sécurité de l'information.
+   - Des sessions de formation régulières doivent être organisées pour renforcer la culture de sécurité au sein de l'organisation.
+
+**Interaction avec le SMSI :**
+
+- Les fonctions et responsabilités liées à la sécurité de l'information sont essentielles à la mise en œuvre et à la maintenance efficace du SMSI.
+- La structure hiérarchique claire permet une répartition efficace des tâches et une communication fluide entre les acteurs impliqués.
+- La coordination entre la Direction Générale, le RSSI et les Responsables de Département garantit une approche holistique de la sécurité de l'information au sein de Predimed, conforme aux exigences de l'ISO/IEC 27001.
+
+En résumé, la clarification des fonctions et responsabilités liées à la sécurité de l'information au sein de Predimed contribue à renforcer la posture de sécurité de l'organisation et à assurer une conformité continue avec les normes de sécurité de l'information.

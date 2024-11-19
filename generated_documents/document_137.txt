@@ -1,0 +1,41 @@
+**Accord de confidentialité et de non-divulgation**
+
+*Clause 1 - Parties concernées :*
+
+Cet accord est conclu entre [Nom de l'entreprise], ci-après désignée comme la "Partie Réceptrice", et [Nom de la partie divulguant l'information], ci-après désignée comme la "Partie Divulgatrice".
+
+*Clause 2 - Objet :*
+
+La Partie Divulgatrice peut fournir à la Partie Réceptrice certaines informations confidentielles liées à [description détaillée des informations confidentielles].
+
+*Clause 3 - Définition des informations confidentielles :*
+
+Les informations confidentielles comprennent, sans s'y limiter, toutes les informations techniques, commerciales, financières ou autres fournies par la Partie Divulgatrice à la Partie Réceptrice.
+
+*Clause 4 - Obligations de confidentialité :*
+
+La Partie Réceptrice s'engage à maintenir la confidentialité des informations confidentielles et à ne pas les divulguer à des tiers sans le consentement écrit préalable de la Partie Divulgatrice.
+
+*Clause 5 - Utilisation des informations confidentielles :*
+
+Les informations confidentielles ne peuvent être utilisées par la Partie Réceptrice que dans le cadre du projet pour lequel elles ont été divulguées et pour aucun autre usage sans consentement écrit de la Partie Divulgatrice.
+
+*Clause 6 - Durée de l'accord et révision :*
+
+Cet accord de confidentialité et de non-divulgation entre en vigueur à la date de sa signature par les deux parties et demeure en vigueur pour une durée de [indiquer la durée]. Les parties conviennent de réviser cet accord de manière périodique et de le mettre à jour si nécessaire.
+
+*Clause 7 - Droits de propriété intellectuelle :*
+
+Aucun droit de propriété intellectuelle n'est transféré en vertu de cet accord. Tous les droits de propriété intellectuelle restent la propriété exclusive de la Partie Divulgatrice.
+
+En témoignage de quoi, les parties ont signé cet accord à [lieu], le [date].
+
+Pour la Partie Réceptrice :  
+Signature :  
+Nom :  
+Fonction :  
+
+Pour la Partie Divulgatrice :  
+Signature :  
+Nom :  
+Fonction :  

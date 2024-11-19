@@ -1,0 +1,25 @@
+**Politique de sécurité du câblage pour predimed**
+
+**1. Objectif**
+L'objectif de la politique de sécurité du câblage de predimed est de garantir l'intégrité, la confidentialité et la disponibilité des données transitant à travers les réseaux câblés de l'organisation. Cette politique vise à assurer la protection contre toute tentative d'interception, d'altération ou de sabotage des informations sensibles.
+
+**2. Portée**
+Cette politique s'applique à tout le câblage utilisé par predimed pour établir des connexions réseau et assurer la communication entre les différents équipements informatiques de l'organisation.
+
+**3. Méthodes de protection du câblage**
+- Tous les câbles réseau doivent être de qualité professionnelle, conformes aux normes en vigueur et installés selon les bonnes pratiques.
+- Le câblage doit être sécurisé à l'intérieur des locaux de l'organisation pour éviter tout accès non autorisé.
+- Les points d'accès au câblage doivent être physiquement protégés, par exemple à l'aide de serrures ou d'autres mécanismes de sécurité.
+- Les câbles doivent être étiquetés de manière appropriée pour faciliter l'identification et la gestion.
+
+**4. Méthodes de surveillance du câblage**
+- Des audits réguliers du câblage doivent être effectués pour vérifier l'intégrité physique des équipements et identifier tout signe de détérioration ou de dysfonctionnement.
+- Des outils de surveillance réseau doivent être utilisés pour détecter toute activité suspecte sur le câblage et signaler les incidents de sécurité potentiels.
+- Les enregistrements des activités de surveillance doivent être conservés conformément aux politiques de conservation des données de l'organisation.
+
+**5. Méthodes de réparation du câblage**
+- En cas de défaillance ou de dommage du câblage, des procédures de réparation doivent être mises en place pour assurer une remise en état rapide et efficace.
+- Des équipes qualifiées et formées doivent être disponibles pour intervenir sur le câblage et effectuer les réparations nécessaires.
+- Toute intervention sur le câblage doit être documentée et suivie d'une vérification pour garantir le bon fonctionnement du système.
+
+Cette politique de sécurité du câblage est un élément essentiel de la stratégie globale de sécurité de predimed, visant à protéger les actifs informationnels de l'organisation contre les menaces internes et externes. Tous les employés de predimed sont tenus de se conformer à cette politique et de signaler toute violation ou incident de sécurité lié au câblage.

@@ -43,9 +43,13 @@ if (!$entreprise) {
 
 // Préparer la demande pour OpenAI
 require_once __DIR__ . '/../vendor/autoload.php'; // Charger l'autoloader Composer
-
+//recuperer la clé API dans le .env
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/..');
+$dotenv->load();
 // Créer une instance du client OpenAI avec votre clé API
-$openai_api_key = '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'; // Remplacez par votre clé API réelle
+$openai_api_key = $_ENV['API_KEY_EXAMPLE']; // Récupérer la clé API depuis le fichier .env
+// Créer une instance du client OpenAI avec votre clé API
+
 $client = \OpenAI::client($openai_api_key);
 
 $prompt = $clause['prompt_associated']; // Utiliser le prompt associé à la clause depuis la base de données

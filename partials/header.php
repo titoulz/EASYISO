@@ -18,7 +18,7 @@ require_once __DIR__.'/../config/database.php';
     <link rel="stylesheet" href="/public/assets/css/navbar.css"> <!-- Inclure le fichier CSS personnalisé -->
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light ">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
         <a href="/public/index.php" class="navbar-brand">EASYISO</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -30,10 +30,29 @@ require_once __DIR__.'/../config/database.php';
                  
                     <li class="nav-item"><a href="/partials/api/chat.php" class="nav-link"><i class="fas fa-comments"></i> Chat</a></li>
                     <li class="nav-item"><a href="/public/index.php?action=dashboard" class="nav-link"><i class="fas fa-tachometer-alt"></i> Tableau de bord</a></li>
-                    <li class ="nav-item"><a href="/partials/mycorp.php" class="nav-link"><i class="fas fa-question"></i> Mon entreprise</a></li>
-                    <li class="nav-item"><a href="/partials/clauses.php" class="nav-link"><i class="fas fa-book"></i>clauses de securite</a></li>
-                    <li class="nav-item"><a href="/partials/documents.php" class="nav-link"><i class="fas fa-file-alt"></i> Documents</a></li>
-                    <li class="nav-item"><a href="/partials/gestion_clause.php" class="nav-link"><i class="fas fa-file-alt"></i> Gestion des clauses </a></li>
+                    <li class="nav-item"><a href="/partials/mycorp.php" class="nav-link"><i class="fas fa-question"></i> Mon entreprise</a></li>
+
+                    <!-- Sous-menu "Point de contrôles" -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="pointDeControlesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-book"></i> Point de contrôles
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="pointDeControlesDropdown">
+                            <a class="dropdown-item" href="/partials/clauses.php"><i class="fas fa-book"></i> Liste des points de controles</a>
+                            <a class="dropdown-item" href="/partials/documents.php"><i class="fas fa-file-alt"></i> Mes points de contrôles</a>
+                            <a class="dropdown-item" href="/partials/gestion_clause.php"><i class="fas fa-cogs"></i> Gestion des points de contrôles</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="pointDeControlesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-book"></i> CLauses
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="pointDeControlesDropdown">
+                            <a class="dropdown-item" href="/partials/gestion_iso_clauses.php"><i class="fas fa-book"></i> Gestion des Clauses</a>
+                           
+                        </div>
+                    </li>
+
                     <li class="nav-item"><a href="/partials/logout.php" class="nav-link"><i class="fas fa-sign-out-alt"></i> Déconnexion</a></li>
                 <?php else: ?>
                     <li class="nav-item"><a href="/views/register.php" class="nav-link">Inscription</a></li>

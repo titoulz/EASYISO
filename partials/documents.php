@@ -35,7 +35,7 @@ foreach ($clauses as $clause) {
 </head>
 <body>
     <div class="container mt-4">
-        <h1>MES DOCUMENTS</h1>
+        <h1>Mes Point de controles</h1>
         <div class="accordion" id="chapterAccordion">
             <?php foreach ($groupedClauses as $chapter => $clauses): ?>
             <div class="card">

@@ -27,14 +27,14 @@ $generatedClauses = $stmt->fetchAll(PDO::FETCH_COLUMN);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestion des Clauses</title>
+    <title>Gestion des Point de controles</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <?php require_once 'header.php'; ?>
 </head>
 
 <body>
     <div class="container mt-4">
-        <h1>Gestion des Clauses</h1>
+        <h1>Gestion des Point de controles</h1>
         <table class="table table-bordered">
             <thead>
                 <tr>

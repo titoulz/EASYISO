@@ -1,40 +1,44 @@
-Document mis à jour :
+**Politique de vérification des références des candidats pour Predimed**
 
-**Politique de Vérification des Références des Candidats**
+**Objectif**  
+L'objectif de la politique de vérification des références des candidats est d'assurer que les informations fournies par les candidats sont vérifiées de manière rigoureuse et efficace, afin de garantir que seules des personnes qualifiées et fiables intègrent l'organisation Predimed.
 
-**1. Objectif**
+**Étapes de vérification**
 
-L'objectif de la politique de vérification des références des candidats pour PrediMed est de garantir que tous les candidats retenus pour un recrutement sont dûment vérifiés afin de s'assurer de leur intégrité, de leur fiabilité et de leurs compétences. Cette politique vise à minimiser les risques liés à l'embauche de personnes inadéquates pour des postes sensibles au sein de l'organisation.
+1. **Obtention du consentement du candidat**  
+Avant de contacter les références d'un candidat, celui-ci devra donner son consentement explicite pour que Predimed puisse collecter, utiliser et vérifier les informations fournies.
 
-**2. Conformité avec les Normes ISO/IEC 27001:2013**
+2. **Vérification des données fournies par le candidat**  
+Comparaison des informations fournies par le candidat (expérience professionnelle, compétences, qualifications, etc.) avec les références fournies.
 
-La vérification des références des candidats est conforme à la directive du Contrôle des Accès des Tiers de l'ISO/IEC 27001:2013. Il est essentiel que l'accès aux informations sensibles de l'organisation soit soumis à une vérification rigoureuse des antécédents des individus pour garantir la sécurité de l'information.
+3. **Contact des références**  
+Contact des références fournies par le candidat pour vérifier les informations mentionnées. Des questions pertinentes seront posées afin d'évaluer la fiabilité du candidat.
 
-**3. Processus de Vérification des Références**
+4. **Analyse et validation des références**  
+Les réponses des références seront consignées, analysées et comparées avec les compétences requises pour le poste. Les informations seront validées pour garantir leur véracité.
 
-La vérification des références des candidats se déroule selon les étapes suivantes :
+5. **Rapport de vérification des références**  
+Un rapport détaillé de la vérification des références sera rédigé, incluant les informations vérifiées, les éventuelles vérifications non satisfaisantes et les recommandations pour la suite du processus de recrutement.
 
-- Obtention du consentement : Le candidat doit autoriser la vérification de ses références.
-- Collecte des références : Le recruteur rassemble les références professionnelles du candidat.
-- Contact des références : Les références du candidat sont contactées pour vérifier les informations fournies et obtenir des retours sur les performances antérieures du candidat.
-- Analyse des retours : Les données recueillies sont analysées pour évaluer la pertinence du candidat pour le poste en question.
+**Exigences légales à respecter**
 
-**4. Cadre Légal et Réglementaire**
+1. **Respect de la vie privée :**  
+Predimed doit se conformer aux lois et réglementations en matière de protection des données personnelles lors de la collecte, de l'utilisation et de la conservation des informations des candidats.
 
-La vérification des références des candidats est réalisée en conformité avec les lois et règlements en vigueur, en particulier en ce qui concerne la protection des données personnelles. Les candidats doivent être informés de la collecte et du traitement de leurs données dans le cadre de cette vérification, et leur consentement explicite doit être obtenu.
+2. **Non-discrimination :**  
+Toutes les vérifications de références doivent être effectuées de manière équitable et sans discrimination basée sur des critères illégaux tels que l'âge, le genre, l'origine ethnique, etc.
 
-**5. Critères de Sélection**
+3. **Transparence :**  
+Les candidats doivent être informés de la procédure de vérification des références et des types d'informations collectées avant le début du processus de recrutement.
 
-Les critères de sélection pour la vérification des références des candidats incluent :
+**Critères de sélection**
 
-- Vérification des antécédents professionnels et éducatifs du candidat.
-- Validation des compétences et des expériences professionnelles mentionnées.
-- Confirmation des dates d'emploi et des responsabilités assumées.
-- Évaluation du comportement et des performances antérieures du candidat.
-- Vérification des références auprès de sources crédibles et vérifiables.
+Les critères de sélection pour la vérification des références des candidats comprennent :
 
-**6. Suivi et Évaluation**
+1. Pertinence des références fournies par le candidat par rapport au poste à pourvoir.
+2. Qualité des informations fournies par les références sur les compétences, le comportement et la fiabilité du candidat.
+3. Cohérence des informations vérifiées avec celles données par le candidat.
+4. Fiabilité et crédibilité des références contactées.
+5. Capacité du candidat à fournir des références professionnelles de qualité.
 
-Suite à la vérification des références des candidats, un suivi sera effectué pour évaluer l'impact de cette procédure sur le processus de recrutement et l'intégration des nouveaux employés au sein de PrediMed. Les retours d'expérience seront utilisés pour améliorer constamment la politique de vérification des références et en garantir l'efficacité.
-
-La mise en œuvre de cette politique de vérification des références des candidats permet à PrediMed de recruter des individus compétents, fiables et intègres pour renforcer ses équipes et assurer la protection de ses informations sensibles.
+Cette politique de vérification des références des candidats pour Predimed vise à garantir un processus de recrutement rigoureux, équitable et conforme aux normes établies par l'ISO/IEC 27001 pour assurer la sécurité de l'information.
